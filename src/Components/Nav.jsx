@@ -5,21 +5,21 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Nav = () => {
   return (
-    <div className='flex flex-col md:flex-row w-full px-4 py-2 items-center justify-center gap-2 md:gap-0'>
-      <div className='hidden basis-1/3 md:flex gap-4'>
+    <div className='flex flex-col md:flex-row w-full px-4 py-2 items-center justify-center'>
+      <div className='hidden basis-1/3 md:flex gap-4 items-center'>
         <h2>EN</h2>
-        <div className='flex'>
-          <input type='search' className='ring rounded-xl ring-black ring-1 max-h-6'/>
+        <div className='flex ring ring-black/40 ring-1 max-h-8 p-2 items-center'>
+          <input placeholder='Search' type='search' className='outline outline-none'/>
           <SearchIcon />
         </div>
       </div>
       <div className='basis-1/3 flex align-center justify-center text-3xl font-bold'>
         XURE
       </div>
-      <div className='basis-1/3 flex justify-end gap-8'>
-        <h2>Register</h2>
-        <h2>Login</h2>
-        <Badge badgeContent={4} color="primary">
+      <div className='basis-1/3 flex justify-end md:mt-0 mt-2'>
+        <h2 className='mx-4 cursor-pointer'>Register</h2>
+        <h2 className='mx-4 cursor-pointer'>Login</h2>
+        <Badge badgeContent={4} color="primary" className='mx-4 cursor-pointer'>
         <ShoppingCartOutlinedIcon color="action" />
       </Badge>
       </div>
