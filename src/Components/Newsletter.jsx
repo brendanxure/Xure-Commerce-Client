@@ -3,7 +3,7 @@ import {AiOutlineSend} from 'react-icons/ai'
 
 const Newsletter = () => {
   return (
-    <div className='grid items-center justify-center text-center w-full py-10 bg-pink-100'>
+    <div className='grid items-center justify-center text-center w-full py-10 bg-pink-100 px-4'>
         <h1 className='text-4xl md:text-6xl my-6 font-bold'>Newsletter</h1>
         <p className='text-xl md:text-2xl'>Get timely update from your favourite products.</p>
         <div className='my-6 flex w-full outline outline-1 outline-gray-400'>

@@ -1,19 +1,17 @@
 import React from 'react'
 import Announcement from '../Components/Announcement'
-import Catergories from '../Components/Catergories'
 import Footer from '../Components/Footer'
 import Nav from '../Components/Nav'
 import Newsletter from '../Components/Newsletter'
+import ProdListFilter from '../Components/ProdListFilter'
 import Product from '../Components/Product'
-import Slider from '../Components/Slider'
 
-const Home = () => {
+const ProductList = () => {
   return (
     <div>
         <Nav />
         <Announcement />
-        <Slider />
-        <Catergories />
+        <ProdListFilter />
         <Product />
         <Newsletter />
         <Footer />
@@ -21,4 +19,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default ProductList

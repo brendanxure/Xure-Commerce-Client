@@ -9,7 +9,7 @@ const Nav = () => {
       <div className='hidden basis-1/3 md:flex gap-4 items-center'>
         <h2>EN</h2>
         <div className='flex ring ring-black/40 ring-1 max-h-8 p-2 items-center'>
-          <input placeholder='Search' type='search' className='outline outline-none'/>
+          <input placeholder='Search' type='text' className='outline outline-none '/>
           <SearchIcon />
         </div>
       </div>
