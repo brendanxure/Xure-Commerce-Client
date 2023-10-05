@@ -26,17 +26,20 @@ export const catergory = [
     {
         id: 1,
         img: "https://images.pexels.com/photos/7945660/pexels-photo-7945660.jpeg?auto=compress&cs=tinysrgb&w=600",
-        title: "SHIRT STYLE!"
+        title: "SHIRT STYLE!",
+        cat: "shirt"
     },
     {
         id: 2,
         img: "https://images.pexels.com/photos/4124201/pexels-photo-4124201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "LOUNGEWEAR LOVE"
+        title: "LOUNGEWEAR LOVE",
+        cat: "casual"
     },
     {
         id: 3,
         img: "https://images.pexels.com/photos/3538028/pexels-photo-3538028.jpeg?auto=compress&cs=tinysrgb&w=600",
-        title: "JACKETS"
+        title: "JACKETS",
+        cat: "coats"
     }
 ]
 
