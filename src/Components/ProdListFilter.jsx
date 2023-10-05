@@ -6,6 +6,7 @@ const ProdListFilter = () => {
     const category = location.pathname.split("/")[2]
     const [filter, setFilter] = useState({})
     
+    const {colour} = filter
 
     const onChange = (e) => {
         const value = e.target.value
@@ -16,7 +17,7 @@ const ProdListFilter = () => {
         }))
     }
     console.log(filter)
-    
+
   return (
     <div className='p-6'>
         <h1 className='text-3xl font-bold'>{category}</h1>
