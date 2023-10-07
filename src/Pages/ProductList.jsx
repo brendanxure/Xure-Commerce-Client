@@ -4,7 +4,6 @@ import Footer from '../Components/Footer'
 import Nav from '../Components/Nav'
 import Newsletter from '../Components/Newsletter'
 import ProdListFilter from '../Components/ProdListFilter'
-import Product from '../Components/Product'
 
 const ProductList = () => {
   return (
@@ -12,7 +11,6 @@ const ProductList = () => {
         <Nav />
         <Announcement />
         <ProdListFilter />
-        <Product />
         <Newsletter />
         <Footer />
     </div>

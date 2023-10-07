@@ -4,8 +4,11 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
-const Product = () => {
+const Product = ({category, sort, filter}) => {
     const [items, setItems] = useState(products)
+
+    const [product, setProducts] = useState([])
+    const [filteredProducts, setFilteredProducts] = useState([])
 
   return (
     <div>
