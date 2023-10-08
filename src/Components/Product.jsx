@@ -1,14 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { products } from '../Data'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import { publicRequest } from '../Utils/RequestMethod';
+import axios from 'axios';
+import { serverUrl } from '../Utils/ServerUrl';
 
 const Product = ({category, sort, filter}) => {
     const [items, setItems] = useState(products)
 
     const [product, setProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
+
+    useEffect(()=> {
+        const getProducts = async () => {
+            try {
+                const res = await axios.get(`${serverUrl}/api/product/`)
+                console.log(res.data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        getProducts()
+    }, [category])
 
   return (
     <div>
