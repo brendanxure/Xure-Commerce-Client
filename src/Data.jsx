@@ -33,13 +33,13 @@ export const catergory = [
         id: 2,
         img: "https://images.pexels.com/photos/4124201/pexels-photo-4124201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         title: "LOUNGEWEAR LOVE",
-        cat: "casual"
+        cat: "women"
     },
     {
         id: 3,
         img: "https://images.pexels.com/photos/3538028/pexels-photo-3538028.jpeg?auto=compress&cs=tinysrgb&w=600",
         title: "JACKETS",
-        cat: "coats"
+        cat: "men"
     }
 ]
 

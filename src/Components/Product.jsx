@@ -16,8 +16,10 @@ const Product = ({category, sort, filter}) => {
     useEffect(()=> {
         const getProducts = async () => {
             try {
-                const res = await axios.get(`${serverUrl}/api/product/`)
+                const res = await axios.get(category ? `${serverUrl}/api/product?category=${category}` 
+                 : `${serverUrl}/api/product/`)
                 console.log(res.data)
+                setProducts(res.data)
             } catch (error) {
                 console.log(error)
             }
@@ -28,7 +30,7 @@ const Product = ({category, sort, filter}) => {
   return (
     <div>
         <div className='grid md:grid-cols-2 sm:grid-cols-2 grid-cols-1 lg:grid-cols-4 p-4'>
-            {items.map((item, id)=> 
+            {product?.map((item, id)=> 
             <div className='relative p-8 m-3 bg-teal-100 z-10 h-[50vh] group'>
                 <section className='w-full h-full absolute top-0 left-0 flex justify-center items-center -z-10'>
                     <div className='bg-white lg:min-h-[240px] lg:w-[240px] rounded-full'></div>
