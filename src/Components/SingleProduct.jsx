@@ -1,12 +1,33 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import { serverUrl } from '../Utils/ServerUrl'
 
 const SingleProduct = () => {
+    const location = useLocation()
+    const id = location.pathname.split("/")[2]
+
+    const [product, setProduct] = useState({})
+
+    useEffect(()=> {
+        const getProduct = async() => {
+            try {
+                const res = await axios.get(`${serverUrl}/api/product/${id}`)
+                setProduct(res.data)
+                console.log(res.data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        getProduct()
+    }, [id])
+
   return (
     <div className='flex-wrap justify-center my-8 mx-4 md:flex'>
-         <img src="https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" className='basis-1/2 p-4' />
+         <img src={product?.img} alt="" className='basis-1/2 p-4' />
         <div className='basis-1/2 flex flex-col p-4'>
-            <h1 className='text-5xl'>Wool Cardigan</h1>
-            <p className='mt-8'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil inventore iste culpa veritatis obcaecati optio itaque eius perferendis eum enim consequuntur vel officia eaque quidem, suscipit sapiente blanditiis ipsa fugit impedit. Quos, nemo fuga. Nostrum vel et ab, ipsum quas consequatur? Non deserunt amet soluta iste odit saepe, sequi vitae.</p>
+            <h1 className='text-5xl'>{product?.title}</h1>
+            <p className='mt-8'>{product?.desc}</p>
             <h1 className='text-5xl mt-8'>$ 20</h1>
             <div className='flex mt-8'>
                 <div className='flex'>

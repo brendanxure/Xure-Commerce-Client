@@ -25,7 +25,7 @@ const ProdListFilter = () => {
             <div className='flex justify-between mt-4'>
                 <div className='flex'>
                     <h1 className='mr-2 text-2xl font-bold'>Filter Products:</h1>
-                    <select name="colour" id="" onChange={onChange} className=' outline outline-2 outline-black mr-2'>
+                    <select name="color" id="" onChange={onChange} className=' outline outline-2 outline-black mr-2'>
                         <option disabled value="" className=''>Colour</option>
                         <option value="white">White</option>
                         <option value="black">Black</option>
