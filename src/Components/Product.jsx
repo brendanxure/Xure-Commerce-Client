@@ -13,7 +13,6 @@ const Product = ({category, sort, filter}) => {
 
     const [products, setProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
-    console.log(filteredProducts)
 
     useEffect(()=> {
         const getProducts = async () => {
@@ -33,8 +32,8 @@ const Product = ({category, sort, filter}) => {
         category && setFilteredProducts(
             products?.filter(item => Object.entries(filter).every(([key, value]) => item[key]?.find(sorted=> sorted.includes(value))))
         )
-
-    }, [category, sort, filter])
+        console.log(filteredProducts)
+    }, [category, sort, filter, products])
 
     useEffect(()=> {
         if(sort === 'newest'){
