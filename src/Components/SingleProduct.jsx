@@ -39,7 +39,7 @@ const SingleProduct = () => {
     }
 
     const onAddCart = () => {
-        dispatch(addProduct({product: {}, price: 23}))
+        dispatch(addProduct({product: {}, price: 67}))
     }
 
   return (
