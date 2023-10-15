@@ -8,6 +8,8 @@ import { allProduct } from '../features/cart/CartSlice';
 const Nav = () => {
 const {products, quantity, total} = useSelector(allProduct)
 console.log(quantity)
+const all = useSelector(allProduct)
+console.log(all)
 
   return (
     <div className='flex flex-col md:flex-row w-full px-4 py-2 items-center justify-center'>

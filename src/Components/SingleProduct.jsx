@@ -39,7 +39,7 @@ const SingleProduct = () => {
     }
 
     const onAddCart = () => {
-        dispatch(addProduct({product: {}, price: 67}))
+        dispatch(addProduct({...product, quantity, color, size}))
     }
 
   return (
@@ -48,7 +48,7 @@ const SingleProduct = () => {
         <div className='basis-1/2 flex flex-col p-4'>
             <h1 className='text-5xl'>{product?.title}</h1>
             <p className='mt-8'>{product?.desc}</p>
-            <h1 className='text-5xl mt-8'>$ 20</h1>
+            <h1 className='text-5xl mt-8'>$ {product?.price}</h1>
             <div className='flex mt-8'>
                 <div className='flex'>
                     <h1 className='mr-2 text-xl'>Colour:</h1>
