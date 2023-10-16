@@ -4,6 +4,7 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useSelector } from 'react-redux';
 import { allProduct } from '../features/cart/CartSlice';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
 const {products, quantity, total} = useSelector(allProduct)
@@ -26,9 +27,11 @@ console.log(all)
       <div className='basis-1/3 flex justify-end md:mt-0 mt-2'>
         <h2 className='mx-4 cursor-pointer'>Register</h2>
         <h2 className='mx-4 cursor-pointer'>Login</h2>
+        <Link to='/cart'>
         <Badge badgeContent={quantity} color="primary" className='mx-4 cursor-pointer'>
         <ShoppingCartOutlinedIcon color="action" />
-      </Badge>
+        </Badge>
+        </Link>
       </div>
     </div>
   )
