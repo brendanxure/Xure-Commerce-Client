@@ -1,9 +1,21 @@
+import axios from 'axios'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { allProduct } from '../features/cart/CartSlice'
+import { serverUrl } from '../Utils/ServerUrl'
 
 const Cartbag = () => {
     const cart = useSelector(allProduct)
+
+    const checkout = async() => {
+        try {
+            const res = await axios.post(`${serverUrl}/api/payment/stripe`, {})
+            console.log(res.data)
+            window.location.href = res.data
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
   return (
     <div className='w-full p-4'>
@@ -64,7 +76,7 @@ const Cartbag = () => {
                     <ol>Shipping Discount: -$5.90</ol>
                     <ol className='text-3xl font-bold my-2'>Total: ${cart?.total}</ol>
                 </ul>
-                <button className='bg-black/90 outline outline-2 outline-gray-400 text-white w-full py-2 px-4 my-4'>CHECKOUT NOW</button>
+                <button className='bg-black/90 outline outline-2 outline-gray-400 text-white w-full py-2 px-4 my-4' onClick={checkout}>CHECKOUT NOW</button>
             </div>
         </div>
     </div>

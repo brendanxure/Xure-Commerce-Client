@@ -6,9 +6,11 @@ import ProductList from './Pages/ProductList';
 import ProductPage from './Pages/ProductPage';
 import Register from './Pages/Register';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
+import Success from './Pages/Success';
+import Error from './Pages/Error';
 
 function App() {
-  const user = true
+  const user = false
   return (
     <div>
       <BrowserRouter>
@@ -19,6 +21,8 @@ function App() {
           <Route path= '/cart' element={<Cart />}/>
           <Route path= '/login' element={user ? <Navigate to='/' replace /> :<Login />}/>
           <Route path= '/register' element={<Register />}/>
+          <Route path= '/success' element={<Success />} />
+          <Route path='/cancel' element={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>
