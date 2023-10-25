@@ -7,7 +7,7 @@ import { serverUrl } from '../Utils/ServerUrl'
 const Login = () => {
   const [loginForm, setLoginForm] = useState({})
   const dispatch = useDispatch()
- console.log(loginForm)
+
   
   const onLogin = async(e) => {
     e.preventDefault()
