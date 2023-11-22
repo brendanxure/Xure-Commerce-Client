@@ -26,7 +26,7 @@ console.log(all)
       </div>
       <div className='basis-1/3 flex justify-end md:mt-0 mt-2'>
         <h2 className='mx-4 cursor-pointer'>Register</h2>
-        <h2 className='mx-4 cursor-pointer'>Login</h2>
+        <Link to='/login'> <h2 className='mx-4 cursor-pointer'>Login</h2></Link>
         <Link to='/cart'>
         <Badge badgeContent={quantity} color="primary" className='mx-4 cursor-pointer'>
         <ShoppingCartOutlinedIcon color="action" />

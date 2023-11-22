@@ -50,23 +50,6 @@ const Cartbag = () => {
                 </div>
                 <hr className='outline outline-1 outline-gray-200 my-8 w-[98%]'></hr>
                  </>)}
-                <div className='flex'>
-                    <img className='basis-1/4 max-w-[20vw]' src='https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&w=400' />
-                    <div className='basis-2/4 ml-4 flex flex-col justify-evenly'>
-                        <h1>Product: Louis Vuitton</h1>
-                        <p>ID: 547287469</p>
-                        <div className='w-6 h-6 rounded-full bg-black'></div>
-                        <p>Size: 39</p>
-                    </div>
-                    <div className='basis-1/4 flex flex-col justify-center'>
-                        <span className='text-2xl flex'>
-                            <h1 className='mr-4'>-</h1>
-                            <h1 className='mr-4'>1</h1>
-                            <h1 className='mr-4'>+</h1>
-                        </span>
-                        <h1 className='text-xl md:text-3xl my-4'>$30</h1>
-                    </div>
-                </div>
             </div>
             <div className='p-4 rounded-xl outline outline-1 outline-gray-200 basis-1/3 max-h-[70vh] md:mt-0 mt-6'>
                 <h1 className='text-4xl my-4'>ORDER SUMMARY</h1>
