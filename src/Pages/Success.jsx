@@ -14,27 +14,27 @@ const Success = () => {
   const navigate = useNavigate()
   const [success, setSuccess] = useState(false)
 
-  useEffect(()=> {
-    const postOrder = async()=> {
-     try {
-      // const headers = {
-      //   Authorization : `Bearer ${accessToken}`
-      // }
-      const response = await axios.post(`${serverUrl}/api/order`, {...orderedProducts, userId })
-      if(response.data){
-        setSuccess(true)
-        console.log(response.data)
-        dispatch(resetCart())
-      }
-     } catch (error) {
-       console.log(error)
-     } finally {
-       setSuccess(false)
-       navigate('/')
-     }
-    } 
-    postOrder()
-  }, [])
+  // useEffect(()=> {
+  //   const postOrder = async()=> {
+  //    try {
+  //     // const headers = {
+  //     //   Authorization : `Bearer ${accessToken}`
+  //     // }
+  //     const response = await axios.post(`${serverUrl}/api/order`, {...orderedProducts, userId })
+  //     if(response.data){
+  //       setSuccess(true)
+  //       console.log(response.data)
+  //       dispatch(resetCart())
+  //     }
+  //    } catch (error) {
+  //      console.log(error)
+  //    } finally {
+  //      setSuccess(false)
+  //      navigate('/')
+  //    }
+  //   } 
+  //   postOrder()
+  // }, [])
 
   return (
     <div>{success ? 'Order Placed Successfully' : '....Please wait'}</div>
