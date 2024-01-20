@@ -13,7 +13,7 @@ const Product = ({category, sort, filter}) => {
 
     const [products, setProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
-
+    console.log(filteredProducts)
     useEffect(()=> {
         const getProducts = async () => {
             try {
